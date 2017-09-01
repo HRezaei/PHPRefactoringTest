@@ -11,7 +11,7 @@ class Statistics
  * @internal string $verb
  * @internal string $pluralModifier
  */
-    private function printGuessStatistics($candidate, $count)
+    public function printGuessStatistics($candidate, $count)
     {
         if ($count == 0) {
             $number = "no";
@@ -26,12 +26,12 @@ class Statistics
             $verb = "are";
             $pluralModifier = "s";
         }
-        sprintf("There %s %s %s%s", array(
-        $verb,
-        $number,
-        $candidate,
-        $pluralModifier
-        ));
+        printf("There %s %s %s%s", 
+            $verb,
+            $number,
+            $candidate,
+            $pluralModifier
+        );
     }
 }
 /**
