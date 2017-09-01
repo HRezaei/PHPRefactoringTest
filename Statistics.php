@@ -26,7 +26,7 @@ class Statistics
             $verb = "are";
             $pluralModifier = "s";
         }
-        printf("There %s %s %s%s", 
+        printf("There %s %s %s%s<br/>", 
             $verb,
             $number,
             $candidate,
@@ -39,3 +39,7 @@ class Statistics
 */
 $statistics = new Statistics();
 $statistics->printGuessStatistics("bird", 2);
+$statistics = new Statistics();
+$statistics->printGuessStatistics("bird", 0);
+$statistics = new Statistics();
+$statistics->printGuessStatistics("bird", 1);

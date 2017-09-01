@@ -6,10 +6,10 @@ class DuckEmulator
  * @var int $type
  */
     protected $type;
-    protected static $DECOY_DUCK = 0;
-    protected static $MALLARD_DUCK = 1;
-    protected static $RUBBER_DUCK = 2;
-    protected static $RED_HEAD_DUCK = 3;
+    public static $DECOY_DUCK = 0;
+    public static $MALLARD_DUCK = 1;
+    public static $RUBBER_DUCK = 2;
+    public static $RED_HEAD_DUCK = 3;
     public function __construct($type)
     {
         $this->type = $type;
@@ -40,11 +40,11 @@ class DuckEmulator
     public function quack()
     {
         if ($this->type == self::$RUBBER_DUCK) {
-            echo $this->getTypeString() . "says: Squeak!";
+            echo $this->getTypeString() . " says: Squeak!";
         } elseif ($this->type == self::$DECOY_DUCK) {
             echo $this->getTypeString() . " is always silent!";
         } else {
-            echo $this->getTypeString() . "says: Quack! Quack!";
+            echo $this->getTypeString() . " says: Quack! Quack!";
         }
     }
 }
